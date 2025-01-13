@@ -3,7 +3,7 @@ import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # For flash messages
+app.secret_key = 'your_secret_key'  
 
 
 def get_db_connection():
@@ -26,12 +26,12 @@ def get_db_connection():
 def users():
     conn = get_db_connection()
     if conn is None:
-        # If the connection fails, redirect to an error page or home page
+        
         return redirect(url_for('home'))
 
     try:
         cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM USER")  # Adjust table name to be lowercase if needed
+        cursor.execute("SELECT * FROM USER")  
         users_list = cursor.fetchall()
         cursor.close()
         return render_template('users.html', users=users_list)
@@ -47,7 +47,7 @@ def users():
 
 @app.route('/')
 def home():
-    return render_template('home.html')  # A simple home page to redirect if there's an error
+    return render_template('home.html')  
 
 
 if __name__ == "__main__":

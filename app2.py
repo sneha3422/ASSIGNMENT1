@@ -35,14 +35,14 @@ def new_user():
             conn = get_db_connection()
             cursor = conn.cursor()
             
-            # Check if the user already exists based on email
+        
             cursor.execute("SELECT * FROM new_user WHERE email = %s", (email,))
             existing_user = cursor.fetchone()
             if existing_user:
                 flash("Email is already in use.", "error")
                 return redirect(url_for('new_user'))
             
-            # Insert new user
+            
             cursor.execute("INSERT INTO new_user (ID, USERNAME, EMAIL, PASSWORD) VALUES (%s, %s, %s, %s)", 
                            (id, username, email, hashed_password))
             conn.commit()  

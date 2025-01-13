@@ -3,9 +3,9 @@ import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Secret key for flash messages
+app.secret_key = 'your_secret_key'  
 
-# Function to establish a database connection
+
 def get_db_connection():
     try:
         connection = mysql.connector.connect(
@@ -21,12 +21,12 @@ def get_db_connection():
         print(f"Database connection error: {e}")
         return None
 
-# Route for displaying a single user's details
+
 @app.route('/users/<int:id>')
 def user_detail(id):
     conn = get_db_connection()
     if conn is None:
-        return redirect(url_for('home'))  # Redirect to a safe route if connection fails
+        return redirect(url_for('home'))  
 
     try:
         cursor = conn.cursor(dictionary=True)
@@ -48,12 +48,12 @@ def user_detail(id):
     finally:
         conn.close()
 
-# Route for displaying all users
+
 @app.route('/users')
 def users():
     conn = get_db_connection()
     if conn is None:
-        return redirect(url_for('home'))  # Redirect to a safe route if connection fails
+        return redirect(url_for('home'))  
 
     try:
         cursor = conn.cursor(dictionary=True)
@@ -71,10 +71,10 @@ def users():
     finally:
         conn.close()
 
-# Home route
+
 @app.route('/')
 def home():
-    return render_template('home.html')  # A simple home page to display when there's an error or on initial load
+    return render_template('home.html') 
 
 if __name__ == "__main__":
     app.run(debug=True)
