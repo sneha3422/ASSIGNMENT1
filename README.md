@@ -201,17 +201,17 @@ In the Setup New Connection window:
 Connection Name: Local instance MySQL91
 Connection Method:  Standard (TCP/IP).
 Hostname: localhost.
-Port: Default port is 3306 
+Port: Default port is 3307 
 Username: root
 Password: Sn3461@#
 Click OK to save and connect to my MySQL server.
 Database Creation
 
 Step 4: Create the Datababase connection 
-My database name is db1 and
+My database name is data and
 
 Step 5: Create Table user
-Now, create a table named user in the db1 database with the following specifications:
+Now, create a table named user in the data database with the following specifications:
 
 id: Auto-incremented, primary key, and not null.
 name: Not null.
