@@ -45,103 +45,8 @@ Download and install MySQL Workbench to interact with your MySQL server.
 Open MySQL Workbench and connect to my MySQL server using the root username and the password you set during installation.
 Create a new database (e.g., db1) and add a users table with the necessary fields (e.g., id, name, email, password).
    
-File names  :
-main.py
-app.py
-app2.py
-app3.py
-
-
-Implemented Routes
-1. /hello Route
-This route displays a simple "Hello World" message when accessed.
-
-2. /users Route
-This route retrieves a list of users from the MySQL database and displays them in an HTML table.
-
-3. /new_user Route
-This route renders an HTML page to accept user input for creating a new user and stores the information in the database.
-
-4. /users/<id> Route
-This route retrieves the details of a specific user by their ID from the database.
-
-Error Handling
-Proper error handling is implemented in each route to ensure that if there is a failure in the database connection or
-any unexpected errors, the user will see an appropriate error message, and they will be redirected to the home page.
-
-Testing and Running the Application by:
-Open a terminal and navigate to the Flask app directory.
-Run the Flask application:
-Access the routes using the following URLs:
-http://127.0.0.1:5000/hello – Displays "Hello World!"
-http://127.0.0.1:5000/users – Displays a list of users from the database.
-http://127.0.0.1:5000/new_user – Displays the form to create a new user.
-http://127.0.0.1:5000/users/<id> – Displays details of a specific user.
-
-Conclusion
-This documentation provides a step-by-step guide to how do I set up a Flask application that integrates with a MySQL database.
-The application demonstrates how to manage users by creating routes for displaying users, adding new users, and viewing specific user details.
-Error handling ensures that the application is robust and can handle common database connection failures.
-
-
-
-
-
-
-
-TASK1:FLASK API DEVELOPMENT
-
-Table of Contents
-Prerequisites
-Setting up Flask Environment
-MySQL Setup
-File names
-Implemented Routes
-/hello route
-/users route
-/new_user route
-/users/<id> route
-Error Handling
-Testing and Running the Application
-Conclusion
-
-Prerequisites
-Python 3.x: Install Python 3.x from the official Python website (https://www.python.org/downloads/).
-MySQL Community Edition: Download and install the MySQL Community Edition (https://dev.mysql.com/downloads/installer/).
-MySQL Workbench: For managing my MySQL database,  I download and install MySQL Workbench (https://dev.mysql.com/downloads/workbench/).
-
-Setting up Flask Environment
-1. Install Python 3.x:
-Install Python 3.x on my system. 
-
-2. Install Flask using pip:
-Once Python is installed, open the terminal and run the following command to install Flask:
-pip install Flask
-
-3. Set up Virtual Environment:
-I activate and create virtual environment with the python -m venv env command.
-
-
-4. Install MySQL Connector:
-To connect Flask with MySQL, I install the MySQL connector by using pip install mysql-connector-python command
-
-
-MySQL Setup
-1. Install MySQL Community Edition:
-Download and install the MySQL Community Edition from the official site.
-During the installation, set up the root password and select Port 3306 as the default connection port.
-2. Install MySQL Workbench:
-Download and install MySQL Workbench to interact with your MySQL server.
-3. Set up MySQL Database:
-Open MySQL Workbench and connect to my MySQL server using the root username and the password you set during installation.
-Create a new database (e.g., db1) and add a users table with the necessary fields (e.g., id, name, email, password).
-   
-File names  :
-main.py
-app.py
-app2.py
-app3.py
-
+File name
+app4.py
 
 Implemented Routes
 1. /hello Route
@@ -208,18 +113,19 @@ Click OK to save and connect to my MySQL server.
 Database Creation
 
 Step 4: Create the Datababase connection 
-My database name is data and
+My database name is database and
 
-Step 5: Create Table user
-Now, create a table named user in the data database with the following specifications:
+Step 5: Create Table users
+Now, create a table named users in the  database with the following specifications:
 
 id: Auto-incremented, primary key, and not null.
 name: Not null.
 email: Not null.
-First, switch to the users database:
+role: not null,
+First, switch to the database database:
 
 Step 6: Insert Data into user Table
-Next, insert sample data into the user table.
+Next, insert sample data into the users table.
 then my table is created.
 
 GIT WORKFLOW AND ITS CONTRIBUTION TO PROJECT:
